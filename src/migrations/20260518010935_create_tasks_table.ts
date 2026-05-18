@@ -1,7 +1,6 @@
-import pkg from "knex";
-const { Knex } = pkg;
+import type { Knex } from "knex"; // Importa apenas como TIPO (o ESLint não reclama)
 
-export async function up(_knex: pkg.Knex): Promise<void> { // Note o pkg.Knex aqui no tipo
+export async function up(_knex: Knex): Promise<void> { // Agora pode usar Knex direto aqui
   return _knex.schema.createTable("tasks", (table) => {
     table.increments("id").primary();
     table.string("title", 255).notNullable();
@@ -11,6 +10,6 @@ export async function up(_knex: pkg.Knex): Promise<void> { // Note o pkg.Knex aq
   });
 }
 
-export async function down(_knex: pkg.Knex): Promise<void> { // Note o pkg.Knex aqui no tipo
+export async function down(_knex: Knex): Promise<void> { // E aqui também
   return _knex.schema.dropTable("tasks");
 }
