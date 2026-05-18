@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "build": "tsc",
-    "migrate": "npx knex migrate:latest --knexfile knexfile.cjs -x ts",
+    "migrate": "npx knex migrate:latest --knexfile knexfile.cjs ts",
     "migrate:rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "ci": "npm run typecheck && npm run lint && npm run build && npm run test"
