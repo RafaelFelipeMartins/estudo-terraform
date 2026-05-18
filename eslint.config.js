@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint';
 export default [
   {
     // Isso diz para o ESLint ignorar completamente essas pastas
-    ignores: ["dist/**", "node_modules/**"] 
+    ignores: ["dist/**", "node_modules/**", "knexfile.cjs"] 
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
