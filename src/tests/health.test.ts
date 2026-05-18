@@ -1,6 +1,6 @@
 import request from 'supertest'
 import { describe, expect, it } from 'vitest'
-import { creatApp } from '../app.js';  
+import creatApp from "../app.js"
 
 describe('health check', () => {
     it('should return API health status', async () => {

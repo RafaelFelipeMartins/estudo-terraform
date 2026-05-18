@@ -1,4 +1,4 @@
-import { creatApp } from "./app.js";
+import creatApp from "../src/app.js";
 const PORT = 3000;
 const app = creatApp();
 app.listen(PORT, () => {

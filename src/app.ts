@@ -1,7 +1,7 @@
 import express from 'express'
 import { Pool } from 'pg'
 
-export function creatApp() {
+export default function creatApp() {
     const app = express();
 
     const pool = new Pool({
